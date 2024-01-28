@@ -1,0 +1,15 @@
+{
+    "name": "hardhatenv",
+    "scripts": {
+        "hh:compile": "hardhat clean && hardhat compile && node ./source/scripts/utils/CopyTypechain.js",
+        "hh:baseinit": "hardhat run ./source/scripts/InitializeContract.ts --network localnet",
+        "hh:node": "hardhat node",
+        "hh:test": "hardhat test",
+        "hh:test-gas": "REPORT_GAS=true npx hardhat test"
+    },
+    "dependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+        "dotenv": "^16.4.1",
+        "hardhat": "^2.19.2"
+    }
+}
